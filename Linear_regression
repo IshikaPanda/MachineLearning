@@ -29,12 +29,12 @@ def leastRegLine(X,Y,n):
     plt.xlabel('X')
     plt.ylabel('Y')
     plt.title('Regression Line')
-    plt.grid(True)
+    plt.grid(False)
     plt.show()
 
-x_input = float(input("Enter a value for x: "))
-y_predicted = a + b * x_input
-print("Predicted y for x = {:.2f} is {:.2f}".format(x_input, y_predicted))
+    x_input = float(input("Enter a value for x: "))
+    y_predicted = a + b * x_input
+    print("Predicted y for x = {:.2f} is {:.2f}".format(x_input, y_predicted))
 
 n = int(input("Enter the number of data points: "))
 X = np.zeros(n)
@@ -43,5 +43,4 @@ for i in range(n):
   print("Enter x and y values for data point {}: ".format(i+1))
   X[i] = float(input("X: "))
   Y[i] = float(input("Y: "))
-    
 leastRegLine(X, Y, n)
